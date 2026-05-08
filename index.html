@@ -6,30 +6,32 @@
 <title>Shopify Cost Calculator — UK Alcohol Merchants</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet"/>
 <style>
 :root {
-  --bg: #F5F0E8;
-  --bg-card: #FDFBF7;
-  --bg-dark: #1A1A14;
-  --ink: #1A1A14;
-  --ink-mid: #4A4840;
-  --ink-light: #8A8478;
-  --accent: #C8460A;
-  --accent-light: #F5E8E0;
-  --accent-mid: #E8896A;
-  --green: #2D6A2D;
-  --green-light: #E8F2E8;
-  --amber: #8A5A00;
-  --amber-light: #FFF3D6;
-  --border: #D8D0C0;
-  --border-light: #EAE4D8;
-  --font-display: 'DM Serif Display', Georgia, serif;
-  --font-body: 'Instrument Sans', sans-serif;
-  --font-mono: 'DM Mono', monospace;
+  --bg: #EEF2F5;
+  --bg-card: #ffffff;
+  --bg-dark: #000033;
+  --ink: #000033;
+  --ink-mid: #1a1a4a;
+  --ink-light: #5a5a80;
+  --accent: #F2055C;
+  --accent-light: #ffe0ee;
+  --accent-mid: #F2055C;
+  --green: #007a5e;
+  --green-light: #d0fff8;
+  --amber: #7a5500;
+  --amber-light: #fffbe0;
+  --neon-yellow: #ECFF00;
+  --neon-cyan: #00FFCD;
+  --border: #c8d0da;
+  --border-light: #dde3ea;
+  --font-display: 'Montserrat', sans-serif;
+  --font-body: 'Montserrat', sans-serif;
+  --font-mono: 'Montserrat', sans-serif;
   --radius: 4px;
   --radius-lg: 8px;
-  --shadow: 0 1px 3px rgba(26,26,20,0.08), 0 4px 16px rgba(26,26,20,0.04);
+  --shadow: 0 1px 3px rgba(0,0,51,0.08), 0 4px 16px rgba(0,0,51,0.05);
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -57,26 +59,27 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
-  border-bottom: 1px solid rgba(245,240,232,0.08);
+  border-bottom: 1px solid rgba(238,242,245,0.08);
 }
 .logo {
   font-family: var(--font-display);
   font-size: 18px;
   letter-spacing: -0.02em;
-  color: #F5F0E8;
+  color: #EEF2F5;
   display: flex;
   align-items: center;
   gap: 10px;
+  font-weight: 700;
 }
 .logo-dot {
   width: 8px; height: 8px;
-  background: var(--accent-mid);
+  background: var(--neon-yellow);
   border-radius: 50%;
   display: inline-block;
 }
 .header-note {
   font-size: 12px;
-  color: rgba(245,240,232,0.45);
+  color: rgba(238,242,245,0.35);
   font-family: var(--font-mono);
   letter-spacing: 0.04em;
 }
@@ -94,7 +97,7 @@ header {
   position: absolute;
   top: -60px; right: -60px;
   width: 320px; height: 320px;
-  background: radial-gradient(circle, rgba(200,70,10,0.18) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(242,5,92,0.22) 0%, transparent 70%);
   pointer-events: none;
 }
 .hero-inner {
@@ -108,8 +111,8 @@ header {
   font-size: 11px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--accent-mid);
-  border: 1px solid rgba(232,137,106,0.3);
+  color: var(--neon-yellow);
+  border: 1px solid rgba(236,255,0,0.35);
   padding: 4px 10px;
   border-radius: 2px;
   margin-bottom: 1.25rem;
@@ -120,15 +123,16 @@ header {
   line-height: 1.1;
   letter-spacing: -0.02em;
   margin-bottom: 1rem;
-  color: #F5F0E8;
+  color: #EEF2F5;
+  font-weight: 700;
 }
 .hero h1 em {
   font-style: italic;
-  color: var(--accent-mid);
+  color: var(--neon-yellow);
 }
 .hero-sub {
   font-size: 15px;
-  color: rgba(245,240,232,0.55);
+  color: rgba(238,242,245,0.55);
   max-width: 520px;
   line-height: 1.7;
 }
@@ -139,14 +143,16 @@ header {
   margin-top: 1.75rem;
 }
 .pill {
-  font-size: 12px;
+  font-size: 11px;
   font-family: var(--font-mono);
-  background: rgba(245,240,232,0.07);
-  border: 1px solid rgba(245,240,232,0.12);
-  color: rgba(245,240,232,0.6);
+  font-weight: 600;
+  background: rgba(0,255,205,0.1);
+  border: 1px solid rgba(0,255,205,0.25);
+  color: var(--neon-cyan);
   padding: 4px 12px;
   border-radius: 20px;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 /* ── LAYOUT ── */
@@ -205,7 +211,7 @@ header {
 .plan-btn.active {
   background: var(--accent);
   border-color: var(--accent);
-  box-shadow: 0 2px 8px rgba(200,70,10,0.25);
+  box-shadow: 0 2px 8px rgba(242,5,92,0.3);
 }
 .plan-btn.active .plan-name { color: #fff; }
 .plan-btn.active .plan-price { color: rgba(255,255,255,0.7); }
@@ -239,12 +245,13 @@ header {
 }
 .save-badge {
   font-size: 10px;
-  background: #2D6A2D;
-  color: #fff;
+  background: var(--neon-cyan);
+  color: #000033;
   padding: 2px 6px;
   border-radius: 20px;
   margin-left: 5px;
   font-family: var(--font-mono);
+  font-weight: 700;
 }
 
 /* ── INPUTS ── */
@@ -359,7 +366,6 @@ header {
 }
 input:checked + .sw-track { background: var(--accent); }
 input:checked + .sw-track::before { transform: translateX(18px); }
-.tax-note {
   font-size: 12px;
   color: var(--ink-light);
   line-height: 1.6;
@@ -394,28 +400,30 @@ input:checked + .sw-track::before { transform: translateX(18px); }
   background: var(--bg-dark);
   border-radius: var(--radius-lg);
   padding: 1.5rem;
-  color: #F5F0E8;
-  box-shadow: 0 4px 24px rgba(26,26,20,0.2);
+  color: #EEF2F5;
+  box-shadow: 0 4px 24px rgba(0,0,51,0.25);
+  border: 1px solid rgba(236,255,0,0.12);
 }
 .results-title {
   font-family: var(--font-mono);
   font-size: 10px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(245,240,232,0.4);
+  color: rgba(236,255,0,0.5);
   margin-bottom: 6px;
 }
 .total-display {
   font-family: var(--font-display);
   font-size: 2.5rem;
   line-height: 1;
-  letter-spacing: -0.02em;
-  color: #F5F0E8;
+  letter-spacing: -0.03em;
+  color: var(--neon-yellow);
   margin-bottom: 4px;
+  font-weight: 700;
 }
 .total-sub {
   font-size: 12px;
-  color: rgba(245,240,232,0.4);
+  color: rgba(238,242,245,0.35);
   font-family: var(--font-mono);
   margin-bottom: 1.25rem;
 }
@@ -426,8 +434,8 @@ input:checked + .sw-track::before { transform: translateX(18px); }
   margin-bottom: 1.25rem;
 }
 .metric {
-  background: rgba(245,240,232,0.05);
-  border: 1px solid rgba(245,240,232,0.08);
+  background: rgba(238,242,245,0.05);
+  border: 1px solid rgba(238,242,245,0.08);
   border-radius: var(--radius);
   padding: 10px;
 }
@@ -436,17 +444,17 @@ input:checked + .sw-track::before { transform: translateX(18px); }
   font-family: var(--font-mono);
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(245,240,232,0.35);
+  color: rgba(238,242,245,0.35);
   margin-bottom: 4px;
 }
 .metric-value {
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
   font-family: var(--font-mono);
-  color: #F5F0E8;
+  color: #EEF2F5;
 }
-.metric.accent .metric-value { color: var(--accent-mid); }
-.metric.green-m .metric-value { color: #7BC67B; }
+.metric.accent .metric-value { color: var(--neon-cyan); }
+.metric.green-m .metric-value { color: var(--neon-yellow); }
 
 /* ── BREAKDOWN TABLE ── */
 .breakdown-title {
@@ -454,40 +462,40 @@ input:checked + .sw-track::before { transform: translateX(18px); }
   font-size: 10px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(245,240,232,0.35);
+  color: rgba(238,242,245,0.35);
   margin-bottom: 10px;
   padding-bottom: 8px;
-  border-bottom: 1px solid rgba(245,240,232,0.08);
+  border-bottom: 1px solid rgba(238,242,245,0.08);
 }
 .breakdown-table { width: 100%; border-collapse: collapse; }
 .breakdown-table td {
   font-size: 12px;
   padding: 6px 0;
-  border-bottom: 1px solid rgba(245,240,232,0.06);
+  border-bottom: 1px solid rgba(238,242,245,0.06);
   vertical-align: top;
-  color: rgba(245,240,232,0.7);
+  color: rgba(238,242,245,0.65);
 }
 .breakdown-table td:last-child {
   text-align: right;
   font-family: var(--font-mono);
   font-size: 12px;
-  color: #F5F0E8;
+  color: #EEF2F5;
 }
 .breakdown-table tr:last-child td { border-bottom: none; }
 .breakdown-table tr.bd-sub td {
   padding-left: 14px;
   font-size: 11px;
-  color: rgba(245,240,232,0.4);
+  color: rgba(238,242,245,0.4);
 }
 .breakdown-table tr.bd-sub td:last-child {
-  color: rgba(245,240,232,0.5);
+  color: rgba(238,242,245,0.5);
   font-size: 11px;
 }
 .breakdown-table tr.bd-total td {
-  border-top: 1px solid rgba(245,240,232,0.15);
+  border-top: 1px solid rgba(238,242,245,0.15);
   border-bottom: none;
-  font-weight: 600;
-  color: #F5F0E8;
+  font-weight: 700;
+  color: var(--neon-yellow);
   padding-top: 10px;
   font-family: var(--font-mono);
 }
@@ -495,7 +503,7 @@ input:checked + .sw-track::before { transform: translateX(18px); }
 /* ── BAR ── */
 .comp-bar {
   height: 4px;
-  background: rgba(245,240,232,0.08);
+  background: rgba(238,242,245,0.08);
   border-radius: 2px;
   overflow: hidden;
   display: flex;
@@ -512,7 +520,7 @@ input:checked + .sw-track::before { transform: translateX(18px); }
   align-items: center;
   gap: 5px;
   font-size: 11px;
-  color: rgba(245,240,232,0.45);
+  color: rgba(238,242,245,0.45);
   font-family: var(--font-mono);
 }
 .comp-leg-dot {
@@ -537,17 +545,17 @@ input:checked + .sw-track::before { transform: translateX(18px); }
 /* ── FOOTER ── */
 footer {
   background: var(--bg-dark);
-  color: rgba(245,240,232,0.35);
+  color: rgba(238,242,245,0.3);
   text-align: center;
   padding: 1.5rem 2rem;
   font-size: 12px;
   font-family: var(--font-mono);
   letter-spacing: 0.04em;
-  border-top: 1px solid rgba(245,240,232,0.06);
+  border-top: 1px solid rgba(236,255,0,0.08);
 }
 
 /* ── DIVIDER ── */
-.divider { height: 1px; background: rgba(245,240,232,0.1); margin: 1rem 0; }
+.divider { height: 1px; background: rgba(238,242,245,0.08); margin: 1rem 0; }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 680px) {
@@ -564,8 +572,7 @@ footer {
 
 <header>
   <div class="logo">
-    <span class="logo-dot"></span>
-    Shopify Cost Calculator
+    <img src="https://animo-sig.s3.eu-west-2.amazonaws.com/ANIMO+LOGO+-+MASTER+WHITE.png" alt="Animo" style="height:28px;width:auto;display:block;"/>
   </div>
   <div class="header-note">UK Alcohol Merchants · Mollie + Shopify Tax</div>
 </header>
@@ -711,7 +718,7 @@ footer {
           <div class="metric-value" id="m4">—</div>
         </div>
         <div class="metric green-m" style="grid-column: 1 / -1;">
-          <div class="metric-label">Effective processing rate (ex. subscription)</div>
+          <div class="metric-label">Effective total cost rate (incl. subscription)</div>
           <div class="metric-value" id="m5">—</div>
         </div>
       </div>
@@ -736,9 +743,9 @@ footer {
 
 <script>
 const MIX = ['ukd','ukc','eu','amex','pbb'];
-const COLORS = ['#E8896A','#7BC67B','#F0C060','#C87AB0','#7AB0D0'];
-const SUB_COLOR = '#6A8080';
-const TAX_COLOR = '#B0C87A';
+const COLORS = ['#F2055C','#00FFCD','#ECFF00','#a855f7','#38bdf8'];
+const SUB_COLOR = '#4a5568';
+const TAX_COLOR = '#00FFCD';
 
 const PLANS = {
   basic:    { name:'Basic',    m:25,   a:19,   txn:0.02,  tax_rate:0.0025 },
@@ -845,7 +852,7 @@ function calc() {
   }
 
   const grand = rows.reduce((s, r) => s + r.amount, 0);
-  const eff = gmv > 0 ? (grand - sub) / gmv * 100 : 0;
+  const eff = gmv > 0 ? grand / gmv * 100 : 0;
 
   document.getElementById('grand').textContent = f(grand);
   document.getElementById('total-sub-line').textContent = 'est. monthly · ' + f(gmv) + ' GMV';
